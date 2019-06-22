@@ -1,0 +1,16 @@
+
+.orderbook {
+
+}
+
+.orderBox {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    border: 1px solid black;
+    h1 {
+        font-size: 20px;
+    }
+}
