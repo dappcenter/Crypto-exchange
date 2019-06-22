@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Crypto exchange site",
   "main": "index.js",
+  "repository": "https://github.com/dybik08/Crypto-exchange",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production",
@@ -30,7 +31,11 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "redux": "^4.0.0",
+    "redux-promise": "^0.6.0",
     "react": "^16.8.6",
+    "react-redux": "^5.0.7",
     "react-dom": "^16.8.6",
     "react-tradingview-widget": "^1.3.0"
   }

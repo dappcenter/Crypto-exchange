@@ -15,10 +15,10 @@ export default class App extends Component {
 
     render(){
         return(
-            <div className={styles.App}>
+            <div className={`${styles.App} ${styles.container}`}>
                 <Header/>
                 <CurrencyInfo/>
-                <div>
+                <div className={"row"}>
                     <Orderbook text={this.state}/>
                     <Chart/>
                 </div>

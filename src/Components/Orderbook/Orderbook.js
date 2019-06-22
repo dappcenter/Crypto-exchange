@@ -4,7 +4,7 @@ const styles = require('./orderbook.scss');
 
 export default (props) => {
     return (
-        <div className={styles.orderbook}>
+        <div className="col-sm-2">
             <div className={styles.orderBox}>
                 <h1>{props.text.ask}</h1>
                 <ul>
