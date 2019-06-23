@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-function CurrencyInfo() {
+function CurrencyInfo(props) {
+    console.log(props, 'propsy w c info');
     return (
         <div>
             <table className="table table-dark">

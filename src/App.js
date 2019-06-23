@@ -22,18 +22,15 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
-        this.props.fetchData();
-    }
-
 
     render(){
+        console.log(this.props, 'propsy');
         return(
             <div className={`${styles.App} ${styles.container}`}>
                 <Header/>
-                <CurrencyInfo/>
+                <CurrencyInfo data={this.props}/>
                 <div className={"row"}>
-                    <Orderbook text={this.state}/>
+                    <Orderbook text={this.state} data={this.props}/>
                     <Chart/>
                 </div>
 
@@ -49,9 +46,9 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators({fetchData}, dispatch);
 }
 
-function mapStateToProps({ BTCData }) {
+function mapStateToProps(state) {
     return {
-        BTCData
+        BTCData: state.data,
     }
 }
 

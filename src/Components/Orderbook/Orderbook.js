@@ -3,6 +3,7 @@ import React from 'react';
 const styles = require('./orderbook.scss');
 
 export default (props) => {
+    console.log(props, 'orderbuk');
     return (
         <div className="col-sm-2">
             <div className={styles.orderBox}>
