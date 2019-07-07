@@ -2,7 +2,6 @@ import React from 'react';
 
 
 function CurrencyInfo(props) {
-    console.log(props.data, 'propsy w c info');
     if(props.data.askPrice){
         return (
             <div>

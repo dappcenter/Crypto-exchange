@@ -1,9 +1,9 @@
 import { FETCH_DATA } from "../actions/fetchData";
 
-export default (state = {}, action) => {
+export default (state = [], action) => {
         switch (action.type) {
             case FETCH_DATA:
-                return action.payload;
+                return state = action.currencyData;
             default:
                 return state;
         }
