@@ -12,25 +12,28 @@ import {fetchData} from "./actions/fetchData";
 const styles = require('./app.scss');
 
 class App extends Component {
-    constructor(props){
-        super(props);
 
-        this.state = {
-            ask: 'Ask',
-            bid: 'Bid',
-            BTCData: ''
-        }
+    componentDidMount() {
+        this.props.fetchData();
+        // setInterval(() => {
+        //     this.props.fetchData();
+        // }, 10000)
     }
 
 
     render(){
-        console.log(this.props, 'propsy');
+        const names = {
+            ask: 'Ask',
+            bid: 'Bid',
+        };
+
+        console.log(this.props, '1');
         return(
             <div className={`${styles.App} ${styles.container}`}>
                 <Header/>
-                <CurrencyInfo data={this.props}/>
+                <CurrencyInfo data={this.props.BTCData}/>
                 <div className={"row"}>
-                    <Orderbook text={this.state} data={this.props}/>
+                    <Orderbook text={names} data={this.props}/>
                     <Chart/>
                 </div>
 
@@ -46,9 +49,10 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators({fetchData}, dispatch);
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({BTCData}) {
+    // console.log(state, 'w mapstetjtoprops')
     return {
-        BTCData: state.data,
+        BTCData,
     }
 }
 

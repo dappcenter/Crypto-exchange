@@ -9,10 +9,7 @@ import App from './App'
 
 const container = document.getElementById('container');
 
-const store = createStore(reducers, {
-    ask: 'Ask',
-    bid: 'Bid',
-    BTCData: ''}, applyMiddleware(ReduxThunk));
+const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
 ReactDOM.render(
     <Provider store={store}>

@@ -3,9 +3,9 @@ import React from 'react';
 const styles = require('./orderbook.scss');
 
 export default (props) => {
-    console.log(props, 'orderbuk');
+    console.log(props, 'propsy');
     return (
-        <div className="col-sm-2">
+        <div className="col-sm-4">
             <div className={styles.orderBox}>
                 <h1>{props.text.ask}</h1>
                 <ul>
